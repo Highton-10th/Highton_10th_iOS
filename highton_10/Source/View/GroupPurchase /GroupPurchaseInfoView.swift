@@ -13,7 +13,9 @@ struct GroupPurchaseInfoView: View {
     @Namespace var image
     
     var body: some View {
+        NavigationStack {
         ZStack(alignment: .top) {
+            Color.rootStrong.ignoresSafeArea()
             NavigationBarWhite(
                 title: "공동구매 보기",
                 leadingView: {
@@ -40,7 +42,7 @@ struct GroupPurchaseInfoView: View {
                 }
             )
             .padding(.top, 54)
-            
+
             ScrollView {
                 VStack {
                     AsyncImage(
@@ -59,6 +61,7 @@ struct GroupPurchaseInfoView: View {
             }
         }
         .ignoresSafeArea(.all)
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

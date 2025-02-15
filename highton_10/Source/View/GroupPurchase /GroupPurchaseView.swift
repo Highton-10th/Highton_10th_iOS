@@ -14,17 +14,20 @@ struct GroupPurchaseView: View {
     @Namespace var image
     
     var body: some View {
-        VStack {
-            navigationBar
-            ScrollView {
-                VStack {
-                    chipScrollView
-                    searchField
-                    groupPurchaseList
+        NavigationStack {
+            ZStack {
+                Color.rootStrong.ignoresSafeArea()
+                navigationBar
+                ScrollView {
+                    VStack {
+                        chipScrollView
+                        searchField
+                        groupPurchaseList
+                    }
                 }
             }
         }
-    }
+        }
     
     private var navigationBar: some View {
         NavigationBar(
@@ -84,9 +87,7 @@ struct GroupPurchaseView: View {
     }
     
     private func groupPurchaseItem(for text: String) -> some View {
-        Button {
-            // Action
-        } label: {
+        NavigationLink(destination: GroupPurchaseInfoView()) {
             VStack {
                 FeedHeader(profileImage: "", name: "최시훈", title: "인증된 유저")
                 groupPurchaseImage
@@ -99,7 +100,7 @@ struct GroupPurchaseView: View {
         }
         .buttonStyle(BounceAnimationRoundedButtonStyle(radius: .radius16))
     }
-    
+
     private var groupPurchaseImage: some View {
         AsyncImage(
             url: URL(string: viewModel.imageUrl)
