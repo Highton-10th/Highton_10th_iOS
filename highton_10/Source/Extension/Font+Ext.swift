@@ -8,20 +8,18 @@
 import SwiftUI
 
 extension Font {
+    // 스타일 가이드 정의
+    static let highDisplay = FontStyle(size: 48, lineHeight: 70)
+    static let highTitle = FontStyle(size: 24, lineHeight: 34)
+    static let highHeadline = FontStyle(size: 20, lineHeight: 28)
+    static let highSubhead = FontStyle(size: 18, lineHeight: 26)
+    static let highBody = FontStyle(size: 16, lineHeight: 24)
+    static let highParagraphLarge = FontStyle(size: 16, lineHeight: 28.8)
+    static let highParagraphSmall = FontStyle(size: 14, lineHeight: 24)
+    static let highCallout = FontStyle(size: 14, lineHeight: 20)
+    static let highFootnote = FontStyle(size: 12, lineHeight: 18)
+    static let highCaption = FontStyle(size: 10, lineHeight: 14)
 
-        // 스타일 가이드 정의
-    static let highDisplay = StyleGuide(size: 48, lineHeight: 70)
-    static let highTitle = StyleGuide(size: 24, lineHeight: 34)
-    static let highHeadline = StyleGuide(size: 20, lineHeight: 28)
-    static let highSubhead = StyleGuide(size: 18, lineHeight: 26)
-    static let highBody = StyleGuide(size: 16, lineHeight: 24)
-    static let highParagraphLarge = StyleGuide(size: 16, lineHeight: 28.8)
-    static let highParagraphSmall = StyleGuide(size: 14, lineHeight: 24)
-    static let highCallout = StyleGuide(size: 14, lineHeight: 20)
-    static let highFootnote = StyleGuide(size: 12, lineHeight: 18)
-    static let highCaption = StyleGuide(size: 10, lineHeight: 14)
-
-    
     static func suit(
         _ size: CGFloat = 16,
         weight: SUITWeight = .regular
@@ -29,7 +27,7 @@ extension Font {
         let fontName = "SUIT-\(weight.rawValue)"
         return Font.custom(fontName, size: size)
     }
-    
+
     static func suitUIFont(
         _ size: CGFloat = 16,
         weight: SUITWeight = .regular
@@ -60,12 +58,30 @@ extension Font {
     }
 }
 
+struct FontStyle {
+    let regular: StyleGuide
+    let medium: StyleGuide
+    let semiBold: StyleGuide
+
+    init(size: CGFloat, lineHeight: CGFloat) {
+        self.regular = StyleGuide(size: size, weight: .regular, lineHeight: lineHeight)
+        self.medium = StyleGuide(size: size, weight: .medium, lineHeight: lineHeight)
+        self.semiBold = StyleGuide(size: size, weight: .semiBold, lineHeight: lineHeight)
+    }
+
+    var font: Font {
+        return regular.font
+    }
+}
+
 struct StyleGuide {
     let font: Font
+    let weight: SUITWeight
     let lineHeight: CGFloat
-    
+
     init(size: CGFloat, weight: SUITWeight = .regular, lineHeight: CGFloat) {
         self.font = .suit(size, weight: weight)
+        self.weight = weight
         self.lineHeight = lineHeight
     }
 }

@@ -37,7 +37,7 @@ struct FeedFoot: View {
 
             Text(description)
                 .foregroundColor(.contentBase)
-                .font(.highSubhead.font)
+                .font(.highSubhead.semiBold.font)
                 .padding(.top, 2)
 
             GeometryReader { geometry in
