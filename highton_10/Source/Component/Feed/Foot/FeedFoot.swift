@@ -29,33 +29,46 @@ struct FeedFoot: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
 
             Text(title)
+                .foregroundColor(.contentAssistive)
+                .font(.highFootnote.font)
 
             Text(description)
+                .foregroundColor(.contentBase)
+                .font(.highSubhead.font)
+                .padding(.top, 2)
 
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: geometry.size.width, height: 4)
                         .opacity(0.3)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.borderOutline)
 
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: min(CGFloat(self.percent)/100 * geometry.size.width, geometry.size.width), height: 4)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.brandStrong)
                         .animation(.linear, value: percent)
                 }
             }
+            .frame(height: 4)
+            .padding(.top, 16)
 
             HStack {
                 Text(startDate)
+                    .foregroundColor(.contentAssistive)
+                    .font(.highFootnote.font)
 
                 Spacer()
 
                 Text(endDate)
+                    .foregroundColor(.contentAssistive)
+                    .font(.highFootnote.font)
+
             }
+            .padding(.top, 6)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 14)
