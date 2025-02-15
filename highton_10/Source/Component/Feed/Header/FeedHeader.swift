@@ -35,5 +35,6 @@ struct FeedHeader: View {
                     .padding(.horizontal, 4)
             }
         }
+        .padding(.horizontal, 16)
     }
 }
