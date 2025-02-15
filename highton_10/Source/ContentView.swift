@@ -56,3 +56,8 @@ extension ContentView {
             .foregroundStyle(.gray)
     }
 }
+
+
+#Preview {
+    ContentView()
+}

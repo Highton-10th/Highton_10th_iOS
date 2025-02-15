@@ -256,7 +256,7 @@
 				DEVELOPMENT_TEAM = 782M695PY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/choesihun/Desktop/highton_10/highton_10/Resource/highton-10-Info.plist";
+				INFOPLIST_FILE = "/Users/seojiwan/Desktop/Highton_10th_iOS/highton_10/Resource/highton-10-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,7 +287,7 @@
 				DEVELOPMENT_TEAM = 782M695PY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "/Users/choesihun/Desktop/highton_10/highton_10/Resource/highton-10-Info.plist";
+				INFOPLIST_FILE = "/Users/seojiwan/Desktop/Highton_10th_iOS/highton_10/Resource/highton-10-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
