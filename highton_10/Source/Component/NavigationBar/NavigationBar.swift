@@ -34,7 +34,8 @@ struct NavigationBar: View {
             
             Text(title)
                 .font(.highTitle.semiBold.font)
-            
+                .foregroundStyle(Color.contentBase)
+
             Spacer()
             
             if let trailingPrimaryView = trailingPrimaryView {
@@ -80,7 +81,7 @@ struct NavigationBarWhite: View {
             }
             Text(title)
                 .font(.highTitle.semiBold.font)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color.contentBase)
             
             Spacer()
             

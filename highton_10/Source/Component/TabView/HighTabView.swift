@@ -66,7 +66,7 @@ struct HighTabView: View {
                                 }
                             }())
                             .opacity(idx == selected ? 1 : 0)
-                    }
+                        }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.rootStrong)
@@ -88,7 +88,7 @@ struct HighTabView: View {
                 }
                 .padding(.vertical, 3)
                 .padding(.bottom, 100)
-                .background(Color(.systemBackground))
+                .background(Color.fillStatic)
                 .cornerRadius(20)
                 .overlay(RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(Color.borderOutline, lineWidth: 0.3))

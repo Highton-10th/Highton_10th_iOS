@@ -17,17 +17,19 @@ struct GroupPurchaseView: View {
         NavigationStack {
             ZStack {
                 Color.rootStrong.ignoresSafeArea()
-                navigationBar
-                ScrollView {
-                    VStack {
-                        chipScrollView
-                        searchField
-                        groupPurchaseList
+                VStack {
+                    navigationBar
+                    ScrollView {
+                        VStack {
+                            chipScrollView
+                            searchField
+                            groupPurchaseList
+                        }
                     }
                 }
             }
         }
-        }
+    }
     
     private var navigationBar: some View {
         NavigationBar(
@@ -76,7 +78,10 @@ struct GroupPurchaseView: View {
             text: $viewModel.searchText,
             placeholder: "공동구매 제목, 유저, 아티스트로 검색하기",
             status: .normal,
-            leadingView: { AnyView(Image("search")) }
+            leadingView: { AnyView(
+                Image("search")
+                    .foregroundStyle(Color.contentAdditive)
+            ) }
         )
     }
     
