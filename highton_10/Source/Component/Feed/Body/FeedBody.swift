@@ -20,7 +20,7 @@ struct FeedBody: View {
                 .foregroundStyle(Color.gray)
         }
         .cornerRadius(.radius12)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(width: 338, height: 220)
         .padding(.vertical, 8)
         .padding(.horizontal, 16)
     }

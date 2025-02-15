@@ -69,8 +69,7 @@ struct HighTabView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.fillStatic)
-                .background(Color.contentDisabled)
+                .background(Color.rootStrong)
                 
                 HStack {
                     Spacer()

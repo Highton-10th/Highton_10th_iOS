@@ -21,23 +21,27 @@ struct FeedHeader: View {
                 Rectangle()
                     .foregroundStyle(Color.gray)
             }
-            .cornerRadius(.radius12)
+            .cornerRadius(.half)
             .frame(width: 36, height: 36)
             
             VStack(spacing: 2) {
                 Text(name)
                     .font(.highFootnote.font)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .foregroundColor(.rootStrong)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .foregroundColor(.contentAssistive)
                     .padding(.horizontal, 4)
+                    .multilineTextAlignment(.leading)
                 
                 Text(title)
                     .font(.highCallout.font)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     .foregroundStyle(.base)
                     .padding(.horizontal, 4)
+                    .multilineTextAlignment(.leading)
             }
             .padding(.vertical, 10)
+            
+            Spacer()
         }
         .padding(.horizontal, 16)
     }

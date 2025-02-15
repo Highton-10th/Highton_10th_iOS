@@ -10,7 +10,6 @@ import Foundation
 enum HighBadgeTypeCase {
     enum Shape {
         case normal
-        case circular
         case circularText
     }
     
@@ -19,11 +18,5 @@ enum HighBadgeTypeCase {
         case large
     }
     
-    enum Style {
-        case grayscale
-        case accent
-        case status(StatusCase)
-    }
-    
-    case badge(shape: Shape, size: Size, style: Style)
+    case badge(shape: Shape, size: Size)
 }

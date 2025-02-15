@@ -29,9 +29,10 @@ struct InputTextField: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(spacing: 8) {
             if let leadingView = leadingView {
                 leadingView()
+                    .frame(width: 24, height: 24)
             }
             
             ZStack(alignment: .leading) {
@@ -48,6 +49,11 @@ struct InputTextField: View {
                 trailingView()
             }
         }
-        .padding()
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(Color.fillRegular)
+        .cornerRadius(.radius12)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
     }
 }

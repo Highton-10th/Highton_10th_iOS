@@ -44,7 +44,7 @@ struct HighTabViewButton: View {
                     .resizable()
                     .renderingMode(.template)
                     .scaledToFit()
-                    .frame(width: 24, height: 24)
+                    .frame(width: 32, height: 32)
                     .scaleEffect(x: animationState == 2 ? 1.1 : 1, y: 1)
                     .scaleEffect(x: 1, y: animationState == 3 ? 1.05 : 1)
                 Text(label)
@@ -53,7 +53,7 @@ struct HighTabViewButton: View {
             }
             .foregroundColor(selected || touchdownState ? Color.contentBase : Color.contentDisabled)
         }
-        .frame(width: 56, height: 56)
+        .frame(maxWidth: .infinity, maxHeight: 62)
         .scaleEffect(animationState == 1 ? 0.9 : 1)
     }
     
