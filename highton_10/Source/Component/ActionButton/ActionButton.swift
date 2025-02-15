@@ -33,7 +33,7 @@ struct ActionButton: View {
                 } label: {
                     Text(label)
                         .font(.suit(type.fontType, weight: .regular))
-                        .foregroundStyle(Color.elevated)
+                        .foregroundStyle(Color.contentElevated)
                         .frame(maxWidth: .infinity, maxHeight: 56, alignment: .center)
                         .background(Color.brandStrong)
                 }
@@ -57,7 +57,7 @@ struct ActionButton: View {
                 } label: {
                     Text(label)
                         .font(.suit(type.fontType, weight: .regular))
-                        .foregroundStyle(Color.assistive)
+                        .foregroundStyle(Color.contentAssistive)
                         .frame(maxWidth: .infinity, maxHeight: 56, alignment: .center)
                 }
                 .buttonStyle(BounceAnimationRoundedButtonStyle())

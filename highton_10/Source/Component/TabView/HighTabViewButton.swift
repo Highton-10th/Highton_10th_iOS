@@ -36,7 +36,7 @@ struct HighTabViewButton: View {
         ZStack {
             if rectangleState {
                 Rectangle()
-                    .foregroundColor(Color.hover)
+                    .foregroundColor(Color.stateHover)
                     .cornerSmooth(.radius16)
             }
             VStack(spacing: 3) {

@@ -19,11 +19,11 @@ struct HighDivider: View {
         case .normal:
             Rectangle()
                 .frame(width: 336, height: 1, alignment: .center)
-                .foregroundStyle(.divider)
+                .foregroundStyle(Color.borderDivider)
         case .wide:
             Rectangle()
                 .frame(width: 360, height: 1, alignment: .center)
-                .foregroundStyle(.divider)
+                .foregroundStyle(Color.borderDivider)
         }
     }
 }

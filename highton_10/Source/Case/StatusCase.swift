@@ -18,9 +18,9 @@ enum StatusCase {
     var color: Color {
         switch self {
         case .normal:
-            return .primary
+            return Color.contentAssistive
         case .normalStrock:
-            return .primary
+            return Color.contentAssistive
         case .success:
             return .successStrong
         case .successStrock:

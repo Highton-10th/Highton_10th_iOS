@@ -11,7 +11,11 @@ import SwiftUI
 struct highton_10App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                Color.rootStrong.ignoresSafeArea()
+                
+                MainView()
+            }
         }
     }
 }

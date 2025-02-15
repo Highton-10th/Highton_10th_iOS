@@ -38,7 +38,7 @@ struct InputTextField: View {
             ZStack(alignment: .leading) {
                 if text.isEmpty {
                     Text(placeholder)
-                        .foregroundColor(status?.color.opacity(0.5) ?? .assistive)
+                        .foregroundColor(status?.color.opacity(0.5) ?? .contentAssistive)
                 }
                 
                 TextField("", text: $text)

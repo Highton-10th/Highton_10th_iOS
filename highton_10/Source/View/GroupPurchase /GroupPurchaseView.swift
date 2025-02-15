@@ -35,7 +35,7 @@ struct GroupPurchaseView: View {
                         // 작성하기 뷰 이동
                     } label: {
                         Image("add")
-                            .foregroundStyle(.assistive)
+                            .foregroundStyle(Color.contentAssistive)
                     }
                 )
             }

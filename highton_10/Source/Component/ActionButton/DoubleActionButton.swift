@@ -31,7 +31,7 @@ struct DoubleActionButton: View {
             } label: {
                 Text(primaryLabel)
                     .font(.suit(16, weight: .regular))
-                    .foregroundStyle(Color.elevated)
+                    .foregroundStyle(Color.contentElevated)
                     .frame(maxWidth: .infinity, maxHeight: 56, alignment: .center)
                     .background(Color.brandStrong)
             }

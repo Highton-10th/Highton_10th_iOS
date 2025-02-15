@@ -35,7 +35,7 @@ struct FeedHeader: View {
                 Text(title)
                     .font(.highCallout.font)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .foregroundStyle(.base)
+                    .foregroundStyle(Color.contentBase)
                     .padding(.horizontal, 4)
                     .multilineTextAlignment(.leading)
             }

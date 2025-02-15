@@ -71,8 +71,8 @@ extension Color {
     static let barBoard = Color.hex("000000", opacity: 0.30)
     
     // Root
-    static let rootRegular = Color.hex("FEFFFF", opacity: 1.0)
-    static let rootStrong = Color.hex("EBEDF2", opacity: 1.0)
+    static let rootRegular = Color.hex("111012", opacity: 1.0)
+    static let rootStrong = Color.hex("0C0B0D", opacity: 1.0)
     
     // State
     static let stateFocussed = Color.hex("EDEBF2", opacity: 0.08)
