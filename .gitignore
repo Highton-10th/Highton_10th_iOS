@@ -98,6 +98,11 @@ XCConfig/*
 !XCConfig/Shared.xcconfig
 Tuist/Dependencies
 Derived/
+<<<<<<< HEAD
+=======
+*.xcworkspace
+*.xcodeproj
+>>>>>>> a841c842646617f840121b9d129f6b088e964372
 *.png
 # Package.swift
 Package.resolved

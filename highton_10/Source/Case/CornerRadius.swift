@@ -23,7 +23,7 @@ enum CornerRadius {
             return 8
         case .radius12:
             return 12
-        case radius14:
+        case .radius14:
             return 14
         case .radius16:
             return 16
