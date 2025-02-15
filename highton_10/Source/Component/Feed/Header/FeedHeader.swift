@@ -27,13 +27,17 @@ struct FeedHeader: View {
             VStack(spacing: 2) {
                 Text(name)
                     .font(.highFootnote.font)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .foregroundColor(.rootStrong)
                     .padding(.horizontal, 4)
                 
                 Text(title)
                     .font(.highCallout.font)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .foregroundStyle(.base)
                     .padding(.horizontal, 4)
             }
+            .padding(.vertical, 10)
         }
         .padding(.horizontal, 16)
     }
