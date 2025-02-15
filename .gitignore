@@ -44,6 +44,7 @@ Temporary Items
 ### Objective-C ###Swift.gitignore
 xcuserdata/
 *.xcscmblueprint
+project.pbxproj
 *.xccheckout
 build/
 DerivedData/

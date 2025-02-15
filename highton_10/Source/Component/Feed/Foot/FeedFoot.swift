@@ -29,9 +29,36 @@ struct FeedFoot: View {
     }
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+
             Text(title)
+
+            Text(description)
+
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: geometry.size.width, height: 4)
+                        .opacity(0.3)
+                        .foregroundColor(.gray)
+
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: min(CGFloat(self.percent)/100 * geometry.size.width, geometry.size.width), height: 4)
+                        .foregroundColor(.blue)
+                        .animation(.linear, value: percent)
+                }
+            }
+
+            HStack {
+                Text(startDate)
+
+                Spacer()
+
+                Text(endDate)
+            }
         }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 14)
     }
 }
 
@@ -44,8 +71,12 @@ struct test1: View {
             startDate: "1월 17일 시작",
             endDate: "2월 27일까지"
         )
+
     }
 }
+
+
+
 
 #Preview {
     test1()
