@@ -9,8 +9,6 @@ import SwiftUI
 
 
 struct HighTabItemView<Content: View>: HighTabItemViewProtocol {
-
-    
     let title: String
     let image: Image
     let content: AnyView
