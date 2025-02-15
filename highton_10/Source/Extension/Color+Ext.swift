@@ -30,13 +30,13 @@ extension Color {
     static let calendarVacation = Color("Color/Calendar/vacation")
     
     // Content
-    static let contentAdditive = Color.hex("1D2133", opacity: 0.8)
-    static let contentAssistive = Color.hex("1D2133", opacity: 0.6)
-    static let contentBase = Color.hex("1D2133", opacity: 1.0)
-    static let contentDisabled = Color.hex("1D2133", opacity: 1.0)
-    static let contentElevated = Color.hex("FFFFFF", opacity: 1.0)
-    static let contentInverted = Color.hex("EBEDF2", opacity: 1.0)
-
+    static let contentAdditive = Color("Color/Content/additive")
+    static let contentAssistive = Color("Color/Content/assistive")
+    static let contentBase = Color("Color/Content/base")
+    static let contentDisabled = Color("Color/Content/disabled")
+    static let contentElevated = Color("Color/Content/elevated")
+    static let contentInverted = Color("Color/Content/inverted")
+    
     // Danger
     static let dangerRegular = Color("Color/Danger/regular")
     static let dangerStrong = Color("Color/Danger/strong")

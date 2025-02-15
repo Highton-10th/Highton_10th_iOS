@@ -39,28 +39,19 @@ struct SegmentedControlView: View {
                 }
             }
             .background(Color.gray.opacity(0.1))
-            .cornerRadius(12)
+            .cornerRadius(.radius12)
         }
         .frame(height: 48)
     }
 }
 
-
-
-
-
-
 struct TestView: View {
     @State private var selectedSegment = 0
-    let segments = ["1", "2", "3", "4"]
+    let segments = ["1", "2", "3", "4", "24"]
 
     var body: some View {
         VStack {
             SegmentedControlView(segments: segments, selectedSegment: $selectedSegment)
-                .padding()
-
-            Text("페이지: \(segments[selectedSegment])")
-                .font(.title)
                 .padding()
         }
     }
