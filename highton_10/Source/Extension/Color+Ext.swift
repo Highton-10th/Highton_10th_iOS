@@ -10,16 +10,16 @@ import SwiftUI
 
 extension Color {
     // Background
-    static let backgroundPrimary = Color.hex("FEFFFF", opacity: 1.0)
-    static let backgroundSecondary = Color.hex("F2F2F7", opacity: 1.0)
+    static let backgroundPrimary = Color.hex("111012", opacity: 1.0)
+    static let backgroundSecondary = Color.hex("0C0B0D", opacity: 1.0)
     static let backgroundTertiary = Color.hex("FFFFFF", opacity: 1.0)
     // Border
-    static let borderDivider = Color.hex("9A92AD", opacity: 0.16)
-    static let borderOutline = Color.hex("9A92AD", opacity: 0.12)
+    static let borderDivider = Color.hex("EDEBF2", opacity: 0.08)
+    static let borderOutline = Color.hex("EDEBF2", opacity: 0.04)
     
     // Brand
-    static let brandRegular = Color.hex("4266EB", opacity: 0.08)
-    static let brandStrong = Color.hex(("4266EB"), opacity: 1.0)
+    static let brandRegular = Color.hex("7242EB", opacity: 0.12)
+    static let brandStrong = Color.hex(("7242EB"), opacity: 1.0)
 
     // Calendar
     static let calendarEvent = Color.hex("FFBF0F", opacity: 1.0)
@@ -29,28 +29,28 @@ extension Color {
     static let calendarVacation = Color.hex("#3275FB", opacity: 1.0)
     
     // Content
-    static let contentAdditive = Color.hex("1D2133", opacity: 0.8)
-    static let contentAssistive = Color.hex("1D2133", opacity: 0.6)
-    static let contentBase = Color.hex("1D2133", opacity: 1.0)
-    static let contentDisabled = Color.hex("1D2133", opacity: 0.32)
+    static let contentAdditive = Color.hex("EDEBF2", opacity: 0.8)
+    static let contentAssistive = Color.hex("EDEBF2", opacity: 0.6)
+    static let contentBase = Color.hex("EDEBF2", opacity: 1.0)
+    static let contentDisabled = Color.hex("EDEBF2", opacity: 0.4)
     static let contentElevated = Color.hex("FFFFFF", opacity: 1.0)
-    static let contentInverted = Color.hex("EBEDF2", opacity: 1.0)
+    static let contentInverted = Color.hex("231D33", opacity: 1.0)
     
     // Danger
     static let dangerRegular = Color.hex("FF244B", opacity: 0.08)
     static let dangerStrong = Color.hex("FF244B", opacity: 1.0)
     
     // Dim
-    static let dimRegular = Color.hex("231D33", opacity: 0.12)
-    static let dimStrong = Color.hex("231D33", opacity: 0.12)
-    static let dimWeak = Color.hex("231D33", opacity: 0.08)
+    static let dimRegular = Color.hex("000000", opacity: 0.16)
+    static let dimStrong = Color.hex("000000", opacity: 0.24)
+    static let dimWeak = Color.hex("000000", opacity: 0.12)
     
     // Fill
-    static let fillInteractive = Color.hex("FFFFFF", opacity: 0.80)
-    static let fillInverted = Color.hex("121114", opacity: 1.0)
-    static let fillRegular = Color.hex("9A92AD", opacity: 0.08)
-    static let fillStatic = Color.hex("FFFFFF", opacity: 1.0)
-    static let fillStrong = Color.hex("4266EB", opacity: 0.08)
+    static let fillInteractive = Color.hex("FFFFFF", opacity: 0.04)
+    static let fillInverted = Color.hex("EDEBF2", opacity: 1.0)
+    static let fillRegular = Color.hex("EDEBF2", opacity: 0.02)
+    static let fillStatic = Color.hex("111012", opacity: 1.0)
+    static let fillStrong = Color.hex("EDEBF2", opacity: 0.04)
     
     // iOS
     static let iOSAccent = Color.hex("4266EB", opacity: 0.08)
@@ -75,9 +75,9 @@ extension Color {
     static let rootStrong = Color.hex("EBEDF2", opacity: 1.0)
     
     // State
-    static let stateFocussed = Color.hex("9A92AD", opacity: 0.12)
-    static let stateHover = Color.hex("231D33", opacity: 0.12)
-    static let statePressed = Color.hex("231D33", opacity: 0.08)
+    static let stateFocussed = Color.hex("EDEBF2", opacity: 0.08)
+    static let stateHover = Color.hex("EDEBF2", opacity: 0.12)
+    static let statePressed = Color.hex("EDEBF2", opacity: 0.16)
     
     // Success
     static let successRegular = Color.hex("16B874", opacity: 0.08)
