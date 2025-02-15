@@ -33,4 +33,11 @@ extension View {
                 RoundedRectangle(cornerRadius: smallerRadius)
             )
     }
+    
+    @ViewBuilder func highTabItem(_ title: String, _ image: Image) -> HighTabItemView<Self> {
+        HighTabItemView(title: title, image: image) {
+            self
+        }
+    }
+
 }

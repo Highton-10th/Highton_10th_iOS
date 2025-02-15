@@ -56,3 +56,16 @@ extension ContentView {
             .foregroundStyle(.gray)
     }
 }
+
+#Preview {
+    HighTabView {
+        ContentView()
+            .highTabItem("Home", Image(systemName: "house.fill"))
+        ContentView()
+            .highTabItem("Home", Image(systemName: "house.fill"))
+        ContentView()
+            .highTabItem("Home", Image(systemName: "house.fill"))
+        ContentView()
+            .highTabItem("Home", Image(systemName: "house.fill"))
+    }
+}

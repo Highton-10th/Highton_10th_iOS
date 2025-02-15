@@ -11,7 +11,16 @@ import SwiftUI
 struct highton_10App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HighTabView {
+                ContentView()
+                    .highTabItem("Home", Image(systemName: "house.fill"))
+                ContentView()
+                    .highTabItem("Home", Image(systemName: "house.fill"))
+                ContentView()
+                    .highTabItem("Home", Image(systemName: "house.fill"))
+                ContentView()
+                    .highTabItem("Home", Image(systemName: "house.fill"))
+            }
         }
     }
 }
