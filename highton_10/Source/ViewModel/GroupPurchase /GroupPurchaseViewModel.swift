@@ -13,4 +13,5 @@ class GroupPurchaseViewModel: ObservableObject {
     @Published var selectedChip: String = ""
     @Published var imageUrl: String = "https://gqvwqimiwieqzagknuun.supabase.co/storage/v1/object/public/images/uploads/1739635965649_Thumbnail(1).png"
     
+    
 }

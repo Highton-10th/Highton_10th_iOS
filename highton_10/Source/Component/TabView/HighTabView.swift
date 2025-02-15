@@ -93,8 +93,11 @@ struct HighTabView: View {
                 .overlay(RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(Color.borderOutline, lineWidth: 0.3))
                 .padding(.bottom, geometry.safeAreaInsets.bottom <= 20 ? -100 : -113)
+                .ignoresSafeArea(.keyboard)
             }
+            .ignoresSafeArea(.keyboard)
         }
         .background(Color.fillStatic)
+        .ignoresSafeArea(.keyboard)
     }
 }

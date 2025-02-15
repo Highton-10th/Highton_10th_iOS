@@ -11,8 +11,6 @@ struct MainView: View {
     var body: some View {
         HighTabView {
             GroupPurchaseView()
-                .highTabItem("홈", Image("home"))
-            ContentView()
                 .highTabItem("공구", Image("handshake"))
             ContentView()
                 .highTabItem("거래", Image("storefront"))
