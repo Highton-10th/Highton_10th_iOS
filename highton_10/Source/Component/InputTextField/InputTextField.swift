@@ -10,14 +10,14 @@ import SwiftUI
 struct InputTextField: View {
     @Binding var text: String
     let placeholder: String
-    var status: StatusCase
+    var status: StatusCase?
     let leadingView: (() -> AnyView)?
     let trailingView: (() -> AnyView)?
     
     init(
         text: Binding<String>,
         placeholder: String,
-        status: StatusCase,
+        status: StatusCase? = nil,
         leadingView: (() -> AnyView)? = nil,
         trailingView: (() -> AnyView)? = nil
     ) {
@@ -37,11 +37,11 @@ struct InputTextField: View {
             ZStack(alignment: .leading) {
                 if text.isEmpty {
                     Text(placeholder)
-                        .foregroundColor(status.color.opacity(0.5))
+                        .foregroundColor(status?.color.opacity(0.5) ?? .assistive)
                 }
                 
                 TextField("", text: $text)
-                    .foregroundColor(status.color)
+                    .foregroundColor(status?.color ?? .primary)
             }
             
             if let trailingView = trailingView {
