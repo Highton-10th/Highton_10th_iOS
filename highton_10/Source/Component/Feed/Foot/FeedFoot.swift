@@ -32,10 +32,6 @@ struct FeedFoot: View {
         VStack(alignment: .leading, spacing: 0) {
 
             Text(title)
-                .foregroundColor(.contentAssistive)
-                .font(.highFootnote.font)
-
-            Text(description)
                 .foregroundColor(.contentBase)
                 .font(.highSubhead.semiBold.font)
                 .padding(.top, 2)

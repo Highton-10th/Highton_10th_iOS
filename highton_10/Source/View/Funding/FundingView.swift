@@ -1,16 +1,14 @@
 //
-//  GroupPurchaseView.swift
+//  FundingView.swift
 //  highton_10
 //
-//  Created by 최시훈 on 2/15/25.
+//  Created by 최시훈 on 2/16/25.
 //
 
 import SwiftUI
 
-import SwiftUI
-
-struct GroupPurchaseView: View {
-    @StateObject var viewModel = GroupPurchaseViewModel()
+struct FundingView: View {
+    @StateObject var viewModel = FundingViewModel()
     @Namespace var image
     
     var body: some View {
@@ -34,7 +32,7 @@ struct GroupPurchaseView: View {
     
     private var navigationBar: some View {
         NavigationBar(
-            title: "공동구매",
+            title: "펀딩",
             trailingPrimaryView: {
                 AnyView(
                     Button {
@@ -51,7 +49,7 @@ struct GroupPurchaseView: View {
     private var chipScrollView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(viewModel.groupPurchaseList, id: \.self) { text in
+                ForEach(viewModel.fundingList, id: \.self) { text in
                     chipButton(for: text)
                 }
             }
@@ -77,7 +75,7 @@ struct GroupPurchaseView: View {
     private var searchField: some View {
         InputTextField(
             text: $viewModel.searchText,
-            placeholder: "공동구매 제목, 유저, 아티스트로 검색하기",
+            placeholder: "펀딩 제목, 유저, 아티스트로 검색하기",
             status: .normal,
             leadingView: { AnyView(
                 Image("search")
@@ -87,18 +85,18 @@ struct GroupPurchaseView: View {
     }
     
     private var groupPurchaseList: some View {
-        ForEach(viewModel.groupPurchaseInfo.indices, id: \.self) { text in
+        ForEach(viewModel.fundingInfo.indices, id: \.self) { text in
             groupPurchaseItem(for: text)
                 .padding(.vertical, 4)
         }
     }
     
     private func groupPurchaseItem(for text: Int) -> some View {
-        NavigationLink(destination: GroupPurchaseInfoView()) {
+        NavigationLink(destination: FundingInfoView()) {
             VStack {
-                FeedHeader(profileImage: viewModel.groupPurchaseInfo[text].header.profileImage, name: viewModel.groupPurchaseInfo[text].header.nickname, title: "인증된 유저")
+                FeedHeader(profileImage: viewModel.fundingInfo[text].header.profileImage, name: viewModel.fundingInfo[text].header.nickname, title: "인증된 유저")
                 groupPurchaseImage(for: text)
-                FeedFoot(title: viewModel.groupPurchaseInfo[text].foot.title, description: viewModel.groupPurchaseInfo[text].foot.description, percent: viewModel.groupPurchaseInfo[text].foot.percent, startDate: viewModel.groupPurchaseInfo[text].foot.startDate, endDate: viewModel.groupPurchaseInfo[text].foot.endDate)
+                FeedFoot(title: viewModel.fundingInfo[text].foot.title, description: viewModel.fundingInfo[text].foot.description, percent: viewModel.fundingInfo[text].foot.percent, startDate: viewModel.fundingInfo[text].foot.startDate, endDate: viewModel.fundingInfo[text].foot.endDate)
             }
             .padding(.vertical, 4)
             .background(Color.fillInteractive)
@@ -110,7 +108,7 @@ struct GroupPurchaseView: View {
 
     private func groupPurchaseImage(for text: Int) -> some View {
         AsyncImage(
-            url: URL(string: viewModel.index[text])
+            url: URL(string: viewModel.fundingInfo[text].relate.profileImage)
         ) { image in
             image
                 .resizable()
@@ -133,4 +131,9 @@ struct GroupPurchaseView: View {
 
 #Preview {
     GroupPurchaseView()
+}
+
+
+#Preview {
+    FundingView()
 }

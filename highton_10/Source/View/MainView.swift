@@ -12,11 +12,11 @@ struct MainView: View {
         HighTabView {
             GroupPurchaseView()
                 .highTabItem("공구", Image("handshake"))
-            ContentView()
+            DealView()
                 .highTabItem("거래", Image("storefront"))
-            ContentView()
+            FundingView()
                 .highTabItem("펀딩", Image("savings"))
-            ContentView()
+            ProfileView()
                 .highTabItem("프로필", Image("person"))
         }
     }

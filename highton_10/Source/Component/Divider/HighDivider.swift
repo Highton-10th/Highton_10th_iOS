@@ -24,6 +24,7 @@ struct HighDivider: View {
             Rectangle()
                 .frame(width: 360, height: 1, alignment: .center)
                 .foregroundStyle(Color.borderDivider)
+                .padding(.vertical, 3.5)
         }
     }
 }
